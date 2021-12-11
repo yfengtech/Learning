@@ -1,5 +1,10 @@
 package sort
 
+import java.util.*
+
+/**
+ * 2021年12月11日
+ */
 class Sort {
 
     /**
@@ -71,6 +76,17 @@ class Sort {
             help[i++] = arr[p2++]
         help.indices.forEach {
             arr[l + it] = help[it]
+        }
+    }
+
+    fun heapSort(arr:IntArray){
+        val heap = PriorityQueue<Int>()
+        arr.forEach {
+            heap.offer(it)
+        }
+        var i = 0;
+        while (heap.isNotEmpty()){
+            arr[i++]=heap.poll()
         }
     }
 

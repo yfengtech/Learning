@@ -1,15 +1,23 @@
 package sort
 
+import heap.MaxHeap
+import java.util.*
 import kotlin.random.Random
 
 object SortApp {
 
     @JvmStatic
     fun main(args: Array<String>) {
+
         val sort = Sort()
-        val arr = genRandomArray(8,10)
-        println("start")
-        sort.mergeSort(arr)
+        val arr = genRandomArray(50, 1000)
+        println("start" + arr.size)
+//        sort.bubbleSort(arr) // 冒泡
+//        sort.mergeSort(arr) // 归并
+//        sort.insertSort(arr) // 插入
+//        sort.selectSort(arr) // 选择
+//        MaxHeap.heapSort(arr) // 大根堆排序
+        sort.heapSort(arr) // 小根堆排序
         arr.forEach {
             println(it)
         }
