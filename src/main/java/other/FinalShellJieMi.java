@@ -19,7 +19,7 @@ import javax.crypto.spec.DESKeySpec;
  * 对finalShell缓存的密码，进行解密，查看原文
  */
 
-public class JieMi {
+public class FinalShellJieMi {
 
     public static void main(String[] args) throws Exception {
         System.out.println(decodePass("egQQQ3cgRDD8+cj8sUyr44UYtUjeTg73"));
